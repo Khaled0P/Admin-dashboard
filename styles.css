@@ -1,20 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: Roboto, sans-serif;
 }
 
-.boardContainer{
+.boardContainer {
     display: grid;
     grid-template-columns: 1fr 5fr;
 }
 
 /************************* side Nav ***************************/
 
-.sideNav{
+.sideNav {
     background-color: #1992d4;
     color: #fff;
     text-transform: capitalize;
@@ -25,60 +25,71 @@
     padding: 10px 20px;
 }
 
-.sideNav>div{
+.sideNav>div {
     display: flex;
     align-items: center;
     gap: 14px;
     margin-bottom: 10px;
+    position: relative;
+    transition: all .3s;
 }
 
-.sideNav .heading{
+.sideNav>div:hover {
+    transform: scale(110%);
+    cursor: pointer;
+}
+
+.sideNav>div:hover p {
+    border-bottom: 2px solid white;
+}
+
+.sideNav .heading {
     margin-bottom: 2em;
 }
 
-.sideNav .communities{
+.sideNav .communities {
     margin-bottom: 2.2em;
 }
 
-.sideNav div.dashIcon{
+.sideNav div.dashIcon {
     width: 18%;
     position: relative;
     top: 2px;
 }
 
-.sideNav div.icon{
+.sideNav div.icon {
     width: 12%;
     position: relative;
     top: 4px;
 }
 
-.sideNav img{
+.sideNav img {
     filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(28deg) brightness(102%) contrast(96%);
 }
 
 /*************** dashbody ****************/
 
-.dashBody{
+.dashBody {
     display: grid;
     grid-template-columns: 3fr 1fr;
     height: max-content;
 }
 
-.dashBody p{
+.dashBody p {
     color: #636363
 }
 
-.topDash{
+.topDash {
     grid-column: 1/3;
     padding-bottom: 5px;
-    box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.topDash p{
+.topDash p {
     color: inherit;
 }
 
-.topDash .notif-search{
+.topDash .notif-search {
     padding: 1em 30px;
 
     display: flex;
@@ -86,15 +97,15 @@
     gap: 20px;
 }
 
-.notif-search label{
+.notif-search label {
     width: 30px;
 }
 
-.topDash .notif-search img{
+.topDash .notif-search img {
     width: 100%;
 }
 
-.notif-search input{
+.notif-search input {
     width: 550px;
     border-radius: 20px;
     padding: 5px 5px 5px 10px;
@@ -104,32 +115,36 @@
     margin-right: auto;
 }
 
-.notif-search input:focus{
+.notif-search input:focus {
     outline: none;
     filter: brightness(80%);
 }
 
-.notif-search .notif-icon{
+.notif-search .notif-icon {
     width: 25px;
 }
 
-.notif-search .notif-icon img{
+.notif-search .notif-icon img {
     width: 100%;
 }
 
-.topAvatar{
+.topAvatar {
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    background-color: #56aad8;
+    background-image: url(attachments/avatars/main.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
-.notif-search p{
+
+.notif-search p {
     font-weight: bold;
     font-size: 1.2em;
     margin-right: 2.5em;
 }
 
-.greet-options{
+.greet-options {
     padding: 10px 30px;
 
     display: flex;
@@ -137,18 +152,21 @@
     gap: 15px;
 }
 
-.greet-options .mainAvatar{
+.greet-options .mainAvatar {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background-color: #56aad8;
+    background-image: url(attachments/avatars/main.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.greet-options .userGreeting{
+.greet-options .userGreeting {
     margin-right: auto;
 }
 
-.userOptions button{
+.userOptions button {
     margin: 10px;
     padding: 11px 0;
     width: 90px;
@@ -161,34 +179,40 @@
 
 /***************** projects **********************/
 
-.projectsContainer{
+.projectsContainer {
     background-color: #e2e8f0;
     padding: 20px;
 }
 
-.projectsContainer>h3{
+.projectsContainer>h3 {
     margin-bottom: 10px;
 }
 
-.projects{
+.projects {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(3, 220px);
     gap: 25px;
 }
 
-.projectBox{
+.projectBox {
     padding: 30px 20px;
     background-color: white;
     border-radius: 7px;
-    box-shadow: 0 3px 5px rgba(0,0,0,.2);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
     position: relative;
+    cursor: pointer;
+    transition: all .3s;
 }
 
-.projectBox::after{
+.projectBox:hover {
+    transform: translateY(-3px);
+}
+
+.projectBox::after {
     content: "";
     display: inline-block;
-    background-image: linear-gradient(180deg, rgba(110,9,121,1) 0%, rgba(0,212,255,1) 100%);
+    background-image: linear-gradient(180deg, rgba(110, 9, 121, 1) 0%, rgba(0, 212, 255, 1) 100%);
     height: 100%;
     width: 3px;
     position: absolute;
@@ -198,42 +222,45 @@
 
 /************* Trending/Announcements *******************/
 
-.announce-trending{
+.announce-trending {
     background-color: #e2e8f0;
     padding: 20px;
 }
 
-.announce-trending h3{
+.announce-trending h3 {
     margin-bottom: 10px;
 }
 
-.announce-trending h3 ~ h3{
+.announce-trending h3~h3 {
     margin-top: 20px;
 }
 
-.announce-container, .trending{
+.announce-container,
+.trending {
     background-color: white;
     padding: 30px 20px;
     border-radius: 7px;
 }
 
-.announce, .trendingUser{
+.announce,
+.trendingUser {
     padding: 15px 10px;
 }
 
-.announce h4{
+.announce h4 {
     margin-bottom: 5px;
 }
 
-.trendingUser{
+.trendingUser {
     display: flex;
     gap: 5px;
 }
 
-.userAvatar{
+.userAvatar {
     width: 40px;
     height: 40px;
-    background-color: #56aad8;
     border-radius: 50%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
-

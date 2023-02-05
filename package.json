@@ -1,0 +1,19 @@
+{
+  "name": "admin-dashboard",
+  "version": "1.0.0",
+  "description": "a dashboard layout challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Khaled0P/Admin-dashboard.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Khaled0P/Admin-dashboard/issues"
+  },
+  "homepage": "https://github.com/Khaled0P/Admin-dashboard#readme"
+}
